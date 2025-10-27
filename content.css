@@ -1,0 +1,47 @@
+/* Highlight on hover */
+.live-css-highlight {
+  outline: 2px dashed rgba(0, 119, 255, 0.7) !important;
+  cursor: pointer !important;
+  box-shadow: 0 0 10px rgba(0, 119, 255, 0.5) !important;
+}
+
+/* --- Panel Iframe --- */
+#live-css-panel-iframe {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  width: 350px !important;
+  height: 500px !important;
+  z-index: 2147483647 !important; /* Max z-index */
+  border: 1px solid #ccc !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+  resize: both !important;
+  overflow: hidden !important;
+  background-color: white; /* Fallback bg */
+}
+
+/* --- Selection Overlay --- */
+#live-css-selection-overlay {
+    position: absolute !important;
+    z-index: 2147483646 !important;
+    border: 2px solid #007BFF !important;
+    pointer-events: none !important; /* Pass clicks through */
+    box-sizing: border-box !important;
+}
+
+.live-css-resize-handle {
+    position: absolute !important;
+    width: 10px !important;
+    height: 10px !important;
+    background: #fff !important;
+    border: 1px solid #007BFF !important;
+    border-radius: 50% !important;
+    pointer-events: all !important; /* Handles must be clickable */
+}
+
+/* Position handles */
+.live-css-resize-handle.se { bottom: -5px; right: -5px; cursor: nwse-resize; }
+.live-css-resize-handle.sw { bottom: -5px; left: -5px; cursor: nesw-resize; }
+.live-css-resize-handle.ne { top: -5px; right: -5px; cursor: nesw-resize; }
+.live-css-resize-handle.nw { top: -5px; left: -5px; cursor: nwse-resize; }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body { margin: 0; font-family: monospace; display: flex; flex-direction: column; height: 100vh; background-color: #282c34; color: #abb2bf; }
+        #header { padding: 10px; background-color: #3c4048; user-select: none; cursor: move; display: flex; justify-content: space-between; align-items: center; }
+        #title { font-weight: bold; }
+        #copy-button { background: #61afef; color: #282c34; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; }
+        #copy-button:active { background: #4a90e2; }
+        #css-display { flex-grow: 1; padding: 10px; white-space: pre-wrap; word-wrap: break-word; overflow-y: auto; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <span id="title">Generated CSS</span>
+        <button id="copy-button">Copy</button>
+    </div>
+    <pre id="css-display"><code>Click an element to start...</code></pre>
+    <script src="panel.js"></script>
+</body>
+</html>
